@@ -284,6 +284,105 @@ Display process tree
 Example:        
 ###############
 pstree                                          : display a beautiful process tree
-
 <<<<<<<<<< pstree
 
+
+
+>>>>>>>>>> jobs
+Description:        
+###############
+Display jobs of current terminal
+
+Example:        
+###############
+jobs                                            : display jobs of current terminal
+fg %1                                           : bring job numbered "1" back to foreground
+<<<<<<<<<< jobs
+
+
+
+>>>>>>>>>> wc
+Description:        
+###############
+Word count
+
+Example:        
+###############
+wc /etc/passwd                                  : display character/word/line count
+wc -c /etc/passwd                               : display character count
+wc -w /etc/passwd                               : display word count
+wc -l /etc/passwd                               : display line count
+<<<<<<<<<< wc
+
+
+
+>>>>>>>>>> apt
+Description:        
+###############
+Advanced package tool
+
+Example:        
+###############
+apt-get update                                  : update package repository
+apt-get upgrade                                 : upgrade packages
+apt-get install vim                             : install "vim"
+
+apt-cache search vim                            : search package "vim"
+apt-cache show vim                              : display description of package "vim"
+
+apt-get remove vim                              : remove package "vim"
+<<<<<<<<<< apt
+
+
+
+>>>>>>>>>> dpkg
+Description:        
+###############
+Advanced package tool
+
+Example:        
+###############
+dpkg --list                                     : list all installed packages
+dpkg --install vim.fc7-8386.deb                 : install the package vim.fc7-8386.deb downloaded by yourself
+<<<<<<<<<< dpkg
+
+
+
+>>>>>>>>>> cat
+Description:        
+###############
+Concatenate and print files 
+
+Example:        
+###############
+cat file1 file2 > file3                         : concatenate "file1" , "file2" and store in file3
+cat -n myfile                                   : cat with line number
+cat -s myfile                                   : cat without empty lines(squeeze empty lines)
+<<<<<<<<<< cat
+
+
+
+>>>>>>>>>> df
+Description:        
+###############
+Display file system disk unstage
+
+Example:        
+###############
+df -h                                           : display disk usage in human readable way
+<<<<<<<<<< df
+
+
+>>>>>>>>>> du
+Description:        
+###############
+Display file space usage
+
+Example:        
+###############
+du                                              : display disk usage for current working dir
+du -h                                           : display disk usage in human readable way
+du -h /tmp                                      : display disk usage for dir "/tmp" and its subdir
+du -h -d 1 /tmp                                 : display disk usage for dir "/tmp" and its subdir whose depth is 1
+du -sh /tmp                                     : display disk usage for dir "/tmp" only (summarize)
+<<<<<<<<<< du
