@@ -425,5 +425,42 @@ Format of /etc/fstab file:
 Device          Mount Point    File System Type   Options   Backup Option   File System Check Order
 ------          -----------    ----------------   -------   -------------   -----------------------
 /media/swap.img swap           swap               sw        0               0
-
 <<<<<<<<<< swap
+
+
+
+>>>>>>>>>> mount
+Description:        
+###############
+Mount a device to file system
+
+Example:        
+###############
+mount /dev/sdb1 /mnt/myusb                      : mount "/dev/sdb1" to "/mnt/myusb"
+<<<<<<<<<< mount
+
+
+
+>>>>>>>>>> umount
+Description:        
+###############
+Umount a device from file system
+
+Example:        
+###############
+umount /dev/sdb1                                : unmount "/dev/sdb1"
+<<<<<<<<<< umount
+
+
+
+>>>>>>>>>> tail
+Description:        
+###############
+Outpu last part of file
+
+Example:        
+###############
+tail                                            : show 10 lines from end of file
+tail -n                                         : show 3 lines from end of file
+tail -f /var/log/syslog                         : show realtime appened data of file
+<<<<<<<<<< tail
