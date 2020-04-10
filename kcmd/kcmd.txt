@@ -1,0 +1,122 @@
+>>>>>>>>>> alias
+Description:
+###############
+List alias in this shell
+
+Example:
+###############
+alias    : print all alias that you can use
+<<<<<<<<<< alias
+
+
+>>>>>>>>>>> dlv
+Description:
+###############
+Go debug tool
+
+Example:
+###############
+dlv debug --headless --listen=:2345 --log --api-version=2    : start remote debug server
+<<<<<<<<<<< dlv
+
+>>>>>>>>>> git
+Description: 
+###############
+Git is a version control tool
+
+Example:
+###############
+git log                                                : show all commit logs
+git reflog                                             : show all recent modificationg, help to find lost commit hash
+
+git clean -f                                           : force remove untracked files
+git clean -dff                                         : force remove untracked files and directory
+
+git branch                                             : show branches
+git checkout -b newbranch                              : create a new branch "newbranch"
+git checkout -- myfile                                 : checkout "myfile" from HEAD and cover the one in working directory
+git checkout .                                         : checkout all files from HEAD and cover those in working directory
+
+git reset HEAD myfile                                  : unstage "myfile" and put it into working directory
+git reset HEAD~1                                       : same as "git reset --mixed HEAD~1"
+git reset --mixed HEAD~1                               : reset HEAD to HEAD~1 and put changes into working directory
+git reset --soft HEAD~1                                : reset HEAD to HEAD~1 and put changes into stage
+git reset --hard HEAD~1                                : reset HEAD to HEAD~1 and clean working directory and stage
+
+git commit --amend -m'amend commit'                    : amending the most recent commit
+
+git config user.name kelvin                            : set user name
+git config user.email kelvinaddr@gmail.com             : set user email
+git config --global user.name kelvin                   : set global user name
+git config --global user.email kelvinaddr@gmail.com    : set global user email
+<<<<<<<<<< git
+
+>>>>>>>>>> grep
+Description:
+###############
+File patter searcher
+
+Example:
+###############
+Searching pattern in file /etc/passwd:
+grep usr /etc/passwd        : search lines that contain substring "usr"
+grep -i usr /etc/passwd     : search lines that contain substring "usr", and ignore case
+grep -v usr /etc/passwd     : search lines that do not contain substring "usr"
+grep -c usr /etc/passwd     : print number of lines that contain substring "usr"
+grep -C 3 usr /etc/passwd   : print match lines and it's leading and trailing 3 lines
+
+Searching pattern in directory /tmp
+grep -r usr /etc            : search recursively in directory
+<<<<<<<<<< grep
+
+
+>>>>>>>>>> sed
+Description:    
+###############
+Stream editor
+
+Example:        
+###############
+sed "s/usr/User/g" /etc/passwd             : substitute "usr" with "User"
+sed "/usr/d" /etc/passwd                   : delete lines contain substring "usr"
+sed "/usr/q" /etc/passwd                   : find first line contains substring "usr" and quit
+sed "/^$/d"  /etc/passwd                   : delete blank lines
+sed -i.bak "s/usr/User/g" /tmp/somefile    : modifiy inplace and save original file with ".bak" extension
+Extra:
+###############
+Posix regex meta characters:
+^  $  .  []  *
+
+Extended regex meta characters:
+^  $  .  []  *  ()  {}  ?  +  |
+
+References:
+###############
+http://www.ing.iac.es/~docs/external/bash/abs-guide/x16155.html    : sed examples
+<<<<<<<<<< sed
+
+
+>>>>>>>>>> hotkey vscode
+Description:    
+###############
+VScode hotkeys
+
+Example:        
+###############
+shift + ctrl + cmd + ->     : code block selection
+option + up                 : move selected block up
+option + down               : move selected block down
+option + shift + up         : copy up
+option + shift + down       : copy down
+cmd + d                     : select words
+shift + option + cmd + down : select multiple lines
+option + cmd                : close code block
+cmd + o                     : close all code blocks
+cmd + ->                    : to end of line
+cmd + <-                    : to start of line
+cmd + shift + ->            : select to end of line
+cmd + shift + <-            : select to start of line
+cmd + [                     : unindent
+cmd + ]                     : indent
+ctrl + `                    : open terminal
+<<<<<<<<<< hotkey vscode
