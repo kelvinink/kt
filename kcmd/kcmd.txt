@@ -194,8 +194,9 @@ Show network status
 Example:        
 ###############
 netstat -nlp                                    : show only listening socket, include its pid, numeric address
-netstat -i                                      : show interface trasactions
+netstat -ie                                     : show interface trasactions
 netstat -s                                      : show network status by protocol
+netstat -r                                      : show kernel ip routing table
 <<<<<<<<<< ssh
 
 
@@ -386,3 +387,43 @@ du -h /tmp                                      : display disk usage for dir "/t
 du -h -d 1 /tmp                                 : display disk usage for dir "/tmp" and its subdir whose depth is 1
 du -sh /tmp                                     : display disk usage for dir "/tmp" only (summarize)
 <<<<<<<<<< du
+
+
+
+>>>>>>>>>> scp
+Description:        
+###############
+Securely fransfer files
+
+Example:        
+###############
+scp root@remotehost:/path/to/file .             : copy file from remotehost to current directory
+scp . root@remotehost:/path/to/file .           : copy file from localhost to remotehost
+scp -r root@remotehost:/path/to/dir .           : copy dir from remotehost to current directory
+scp -r root@remotehost:/path/to/dir .           : copy dir from localhost to remotehost
+<<<<<<<<<< scp
+
+
+
+>>>>>>>>>> swap
+Description:        
+###############
+Swap utilities: dd, mkswap, swapon, /etc/fstab
+
+Example:        
+###############
+dd if=/dev/zero of=/media/swap.img bs=1024 count=4M    : create a file whose size is 4G
+mkswap /media/swap.img                                 : make the file a swap
+swapon /media/swap.img                                 : temporary turn on the swap
+
+echo "/media/swap.img swap swap sw 0 0" >> /etc/fstab  : turn on swap on boot time
+
+Extra:
+###############
+Format of /etc/fstab file:
+
+Device          Mount Point    File System Type   Options   Backup Option   File System Check Order
+------          -----------    ----------------   -------   -------------   -----------------------
+/media/swap.img swap           swap               sw        0               0
+
+<<<<<<<<<< swap
