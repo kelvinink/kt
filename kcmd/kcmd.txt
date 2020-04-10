@@ -19,6 +19,8 @@ Example:
 dlv debug --headless --listen=:2345 --log --api-version=2    : start remote debug server
 <<<<<<<<<<< dlv
 
+
+
 >>>>>>>>>> git
 Description: 
 ###############
@@ -27,10 +29,13 @@ Git is a version control tool
 Example:
 ###############
 git log                                                : show all commit logs
-git reflog                                             : show all recent modificationg, help to find lost commit hash
+git reflog                                             : show all recent actions, help to find lost commit hash
 
 git clean -f                                           : force remove untracked files
 git clean -dff                                         : force remove untracked files and directory
+
+git stash                                              : stashing changes and keep working dir clean
+git stash pop                                          : restore stashed changes back to working dir
 
 git branch                                             : show branches
 git checkout -b newbranch                              : create a new branch "newbranch"
@@ -45,11 +50,18 @@ git reset --hard HEAD~1                                : reset HEAD to HEAD~1 an
 
 git commit --amend -m'amend commit'                    : amending the most recent commit
 
+git cherry-pick 2e3c1a1                                : pick changes from 2e3c1a1 and add to current branch
+
+git revert HEAD                                        : revert changes of HEAD
+git revert -m 1 2e3c1a1                                : 2e3c1a1 is a merge commit and -m option specify the parent number
+
 git config user.name kelvin                            : set user name
 git config user.email kelvinaddr@gmail.com             : set user email
 git config --global user.name kelvin                   : set global user name
 git config --global user.email kelvinaddr@gmail.com    : set global user email
 <<<<<<<<<< git
+
+
 
 >>>>>>>>>> grep
 Description:
@@ -65,9 +77,10 @@ grep -v usr /etc/passwd     : search lines that do not contain substring "usr"
 grep -c usr /etc/passwd     : print number of lines that contain substring "usr"
 grep -C 3 usr /etc/passwd   : print match lines and it's leading and trailing 3 lines
 
-Searching pattern in directory /tmp
-grep -r usr /etc            : search recursively in directory
+Searching pattern in directory:
+grep -r usr /etc            : search recursively in directory "/etc"
 <<<<<<<<<< grep
+
 
 
 >>>>>>>>>> sed
@@ -96,6 +109,7 @@ http://www.ing.iac.es/~docs/external/bash/abs-guide/x16155.html    : sed example
 <<<<<<<<<< sed
 
 
+
 >>>>>>>>>> hotkey vscode
 Description:    
 ###############
@@ -120,3 +134,156 @@ cmd + [                     : unindent
 cmd + ]                     : indent
 ctrl + `                    : open terminal
 <<<<<<<<<< hotkey vscode
+
+
+
+>>>>>>>>>> mysql
+Description:        
+###############
+Mysql client
+
+Example:        
+###############
+mysql -h localhost -u root -p                    : login mysql
+
+show databases;                                  : show all databases
+use mydb;                                        : using "mydb"
+show tables;                                     : show all tables in current databases
+show index from mydb.mytable                     : show index "of mydb.mytable"
+show variables like "%slow%"                     : show slow log related variables
+
+set global slow_query_log="ON"                   : turn on slow log
+set global slow_query_log_file="path/to/file"    : set slow log file
+set global log_query_time=10                     : log to slow log if query time exceed 10ms
+<<<<<<<<<< mysql
+
+
+
+>>>>>>>>>> export
+Description:        
+###############
+Exporting shell variables
+
+Example:        
+###############
+export http_proxy=http://10.20.47.147:3128       : use http proxy http://10.20.47.147:3128 
+export https_proxy=https://10.20.47.147:3128     : use https proxy https://10.20.47.147:3128   
+export PATH="/usr/local/bin:$PATH"               : add "/usr/local/bin" to PATH
+<<<<<<<<<< export
+
+
+
+>>>>>>>>>> ssh
+Description:        
+###############
+SSH client
+
+Example:        
+###############
+ssh root@localhost                              : login "localhost" as user "root"
+ssh -i path/to/private_key root@localhost       : login "localhost" as user "root", provide private key file
+<<<<<<<<<< ssh
+
+
+
+>>>>>>>>>> netstat
+Description:        
+###############
+Show network status
+
+Example:        
+###############
+netstat -nlp                                    : show only listening socket, include its pid, numeric address
+netstat -i                                      : show interface trasactions
+netstat -s                                      : show network status by protocol
+<<<<<<<<<< ssh
+
+
+
+>>>>>>>>>> docker
+Description:        
+###############
+Docker
+
+Example:        
+###############
+docker login                                    : login dockerhub
+docker pull ubuntu                              : pull ubuntu image from dockerhub
+docker images                                   : show all images
+docker rmi myimage                              : remove image "myimage"
+docker ps                                       : show running containers
+docker ps -a                                    : show all containers, including stopped one
+docker network create mynet                     : create new network "mynet" 
+docker start mycontainer                        : start instance "mycontainer"
+docker stop mycontainer                         : stop instance "mycontainer"
+docker rm mycontainer                           : remove container "mycontainer"
+docker-compose up --scale myservice=3           : scaling 3 "myservice" instances
+<<<<<<<<<< docker
+
+
+
+>>>>>>>>>> ps
+Description:        
+###############
+Show process status
+
+Example:        
+###############
+ps                                              : disply process of current shell
+ps aux                                          : display detail info of all process
+ps -ef                                          : same as "ps aux"
+<<<<<<<<<< ps
+
+
+
+>>>>>>>>>> passwd
+Description:        
+###############
+Change password
+
+Example:        
+###############
+passwd                                          : change password for current user
+passwd otheruser                                : change password for "otheruser"
+<<<<<<<<<< ps
+
+
+
+>>>>>>>>>> kill
+Description:        
+###############
+Kill a process
+
+Example:        
+###############
+kill 13601                                      : kill process 13601
+kill -9 13601                                   : force kill process 13601
+<<<<<<<<<< kill
+
+
+
+>>>>>>>>>> killall
+Description:        
+###############
+Kill processes by name
+
+Example:        
+###############
+killall xlogo                                   : kill all processes named "xlogo"
+killall -u kelvin xlogo                         : kill all processes named "xlogo" and belong to user "kelvin"
+killall -r x.*                                  : kill by regex, kill all precesses whose name start with "x"
+<<<<<<<<<< killall
+
+
+
+>>>>>>>>>> pstree
+Description:        
+###############
+Display process tree
+
+Example:        
+###############
+pstree                                          : display a beautiful process tree
+
+<<<<<<<<<< pstree
+
