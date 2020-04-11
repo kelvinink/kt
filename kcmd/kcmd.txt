@@ -499,6 +499,7 @@ tail -f /var/log/syslog                         : show realtime appened data of 
 
 >>>>>>>>>> chown
 Description:
+Change owner
 ###############
 
 Example:
@@ -508,4 +509,52 @@ chown -R root:root /var/html            : change the owner and group of dir "/va
 <<<<<<<<<< chown
 
 
+
+
+>>>>>>>>>> usermod
+Description:
+###############
+Modify user account
+
+Example:
+###############
+usermod -aG docker kelvin          : Add user "kelvin" to group "docker"
+<<<<<<<<<< usermod
+
+
+
+
+>>>>>>>>>> configuration files
+Description:
+###############
+
+Example:
+###############
+/etc/group                         : group account info
+/etc/shadow                        : secure account info
+/etc/passwd                        : user account info
+/etc/gshadow                       : secure group account info
+
+~/.bashrc                          : bash script sourced when login
+~/.bash_profile                    : sourced by bash
+~/.profile                         : sourced by sh or bash
+/etc/profile                       : system level ".profile"
+/etc/bash.bashrc                   : system level ".bashrc"
+
+~/.zprofile                        : mirror of "~/.profile"
+~/.zshrc                           : mirror of "~/.bashrc"
+/etc/zprofile                      : mirror of "/etc/profile"
+/etc/zshrc                         : mirror of "/etc/bash.bashrc"
+
+~/.gitconfig                       : git config file
+
+~/.ssh                             : ssh config dir
+~/.ssh/authorized_keys             : remote device public key, authorize password less login to this device
+~/.ssh/known_hosts                 : known remote hosts
+~/.ssh/id_rsa                      : ssh private key of this device
+~/.ssh/id_rsa.pub                  : ssh public key of this device
+      
+
+
+<<<<<<<<<< configuration files
 
