@@ -484,6 +484,19 @@ usermod -aG docker kelvin                       : Add user "kelvin" to group "do
 
 
 
+>>>>>>>>>> g++
+Description:        
+###############
+C++ compiler
+
+Example:        
+###############
+g++ -std=c++11 sorting.cpp                      : compile "sorting.cpp" with c++11 standard
+g++ -o myprogram file1.cpp file2.cpp            : compile "file1.cpp" and "file2.cpp" together and output a program name "myprogram"
+<<<<<<<<<< g++
+
+
+
 >>>>>>>>>> swap
 Description:        
 ###############
@@ -524,7 +537,6 @@ scp -r root@remotehost:/path/to/dir .                                 : copy dir
 
 
 
-
 >>>>>>>>>> configuration files
 Description:
 ###############
@@ -555,13 +567,14 @@ Example:
 ~/.zprofile                        : mirror of "~/.profile"
 ~/.zshrc                           : mirror of "~/.bashrc"
 
-~/.gitconfig                       : git config file
+.git/config                        : repository config mainipulated with --file option
+~/.gitconfig                       : user config mainipulated with --global option
+/etc/gitconfig                     : system wide config mainipulated with --system option
 
 ~/.ssh/                            : ssh config dir
 ~/.ssh/authorized_keys             : remote device public key, authorize password less login to this device
 ~/.ssh/known_hosts                 : known remote hosts
 ~/.ssh/id_rsa                      : ssh private key of this device
 ~/.ssh/id_rsa.pub                  : ssh public key of this device
-    
 <<<<<<<<<< configuration files
 
