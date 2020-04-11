@@ -166,8 +166,8 @@ Exporting shell variables
 
 Example:        
 ###############
-export http_proxy=http://10.20.47.147:3128       : use http proxy http://10.20.47.147:3128 
-export https_proxy=https://10.20.47.147:3128     : use https proxy https://10.20.47.147:3128   
+export http_proxy=http://10.20.47.147:3128       : use http proxy "http://10.20.47.147:3128"
+export https_proxy=https://10.20.47.147:3128     : use https proxy "https://10.20.47.147:3128"  
 export PATH="/usr/local/bin:$PATH"               : add "/usr/local/bin" to PATH
 <<<<<<<<<< export
 
@@ -219,6 +219,9 @@ docker start mycontainer                        : start instance "mycontainer"
 docker stop mycontainer                         : stop instance "mycontainer"
 docker rm mycontainer                           : remove container "mycontainer"
 docker-compose up --scale myservice=3           : scaling 3 "myservice" instances
+docker exec -it ubuntu bash                     : connect to container "ubuntu" and run bash shell
+docker save -o ubuntu.tar  ecaf60f29fef         : save image "ecaf60f29fef" as "ubuntu.tar"
+docker image import ~/ubuntu.tar                : import image from "ubuntu.tar"
 <<<<<<<<<< docker
 
 
@@ -317,6 +320,31 @@ wc -l /etc/passwd                               : display line count
 
 
 
+>>>>>>>>>> conda
+Description:        
+###############
+Virtual environment management tool
+
+Example:        
+###############
+conda create -n myvenv python=3.6               : create a new virtual environment "venv" with python3.6 insalled
+<<<<<<<<<< conda
+
+
+
+>>>>>>>>>> tar
+Description:        
+###############
+An archive tool
+
+Example:        
+###############
+tar zcvf -o mytar.tar.gz .                     : create an archive and gzip it for current dir
+tar zxvf mytar.tar.gz                          : unzip and extract archive "mytar.tar.gz"
+<<<<<<<<<< tar
+
+
+
 >>>>>>>>>> apt
 Description:        
 ###############
@@ -397,10 +425,11 @@ Securely fransfer files
 
 Example:        
 ###############
-scp root@remotehost:/path/to/file .             : copy file from remotehost to current directory
-scp . root@remotehost:/path/to/file .           : copy file from localhost to remotehost
-scp -r root@remotehost:/path/to/dir .           : copy dir from remotehost to current directory
-scp -r root@remotehost:/path/to/dir .           : copy dir from localhost to remotehost
+scp root@remotehost:/path/to/file .                                   : copy file from remotehost to current directory
+scp -i paht/to/remote/private/key root@remotehost:/path/to/file .     : copy file from remotehost to current directory, 
+scp . root@remotehost:/path/to/file .                                 : copy file from localhost to remotehost
+scp -r root@remotehost:/path/to/dir .                                 : copy dir from remotehost to current directory
+scp -r root@remotehost:/path/to/dir .                                 : copy dir from localhost to remotehost
 <<<<<<<<<< scp
 
 
@@ -464,3 +493,19 @@ tail                                            : show 10 lines from end of file
 tail -n                                         : show 3 lines from end of file
 tail -f /var/log/syslog                         : show realtime appened data of file
 <<<<<<<<<< tail
+
+
+
+
+>>>>>>>>>> chown
+Description:
+###############
+
+Example:
+###############
+chown root:root jdk-11.0.6.tar.gz       : change the owner and group of "jdk-11.0.6.tar.gz" as root
+chown -R root:root /var/html            : change the owner and group of dir "/var/html" as root
+<<<<<<<<<< chown
+
+
+
