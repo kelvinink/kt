@@ -71,14 +71,14 @@ File patter searcher
 Example:
 ###############
 Searching pattern in file /etc/passwd:
-grep usr /etc/passwd        : search lines that contain substring "usr"
-grep -i usr /etc/passwd     : search lines that contain substring "usr", and ignore case
-grep -v usr /etc/passwd     : search lines that do not contain substring "usr"
-grep -c usr /etc/passwd     : print number of lines that contain substring "usr"
-grep -C 3 usr /etc/passwd   : print match lines and it's leading and trailing 3 lines
+grep usr /etc/passwd            : search lines that contain substring "usr"
+grep -i usr /etc/passwd         : search lines that contain substring "usr", and ignore case
+grep -v usr /etc/passwd         : search lines that do not contain substring "usr"
+grep -c usr /etc/passwd         : print number of lines that contain substring "usr"
+grep -C 3 usr /etc/passwd       : print match lines and it's leading and trailing 3 lines
 
 Searching pattern in directory:
-grep -r usr /etc            : search recursively in directory "/etc"
+grep -r usr /etc                : search recursively in directory "/etc"
 <<<<<<<<<< grep
 
 
@@ -117,22 +117,22 @@ VScode hotkeys
 
 Example:        
 ###############
-shift + ctrl + cmd + ->     : code block selection
-option + up                 : move selected block up
-option + down               : move selected block down
-option + shift + up         : copy up
-option + shift + down       : copy down
-cmd + d                     : select words
-shift + option + cmd + down : select multiple lines
-option + cmd                : close code block
-cmd + o                     : close all code blocks
-cmd + ->                    : to end of line
-cmd + <-                    : to start of line
-cmd + shift + ->            : select to end of line
-cmd + shift + <-            : select to start of line
-cmd + [                     : unindent
-cmd + ]                     : indent
-ctrl + `                    : open terminal
+shift + ctrl + cmd + ->         : code block selection
+option + up                     : move selected block up
+option + down                   : move selected block down
+option + shift + up             : copy up
+option + shift + down           : copy down
+cmd + d                         : select words
+shift + option + cmd + down     : select multiple lines
+option + cmd                    : close code block
+cmd + o                         : close all code blocks
+cmd + ->                        : to end of line
+cmd + <-                        : to start of line
+cmd + shift + ->                : select to end of line
+cmd + shift + <-                : select to start of line
+cmd + [                         : unindent
+cmd + ]                         : indent
+ctrl + `                        : open terminal
 <<<<<<<<<< hotkey vscode
 
 
@@ -384,9 +384,9 @@ Concatenate and print files
 
 Example:        
 ###############
-cat file1 file2 > file3                         : concatenate "file1" , "file2" and store in file3
-cat -n myfile                                   : cat with line number
-cat -s myfile                                   : cat without empty lines(squeeze empty lines)
+cat file1 file2 > file3      : concatenate "file1" , "file2" and store in file3
+cat -n myfile                : cat with line number
+cat -s myfile                : cat without empty lines(squeeze empty lines)
 <<<<<<<<<< cat
 
 
@@ -398,7 +398,7 @@ Display file system disk unstage
 
 Example:        
 ###############
-df -h                                           : display disk usage in human readable way
+df -h                       : display disk usage in human readable way
 <<<<<<<<<< df
 
 
@@ -409,11 +409,11 @@ Display file space usage
 
 Example:        
 ###############
-du                                              : display disk usage for current working dir
-du -h                                           : display disk usage in human readable way
-du -h /tmp                                      : display disk usage for dir "/tmp" and its subdir
-du -h -d 1 /tmp                                 : display disk usage for dir "/tmp" and its subdir whose depth is 1
-du -sh /tmp                                     : display disk usage for dir "/tmp" only (summarize)
+du                          : display disk usage for current working dir
+du -h                       : display disk usage in human readable way
+du -h /tmp                  : display disk usage for dir "/tmp" and its subdir
+du -h -d 1 /tmp             : display disk usage for dir "/tmp" and its subdir whose depth is 1
+du -sh /tmp                 : display disk usage for dir "/tmp" only (summarize)
 <<<<<<<<<< du
 
 
@@ -465,7 +465,7 @@ Mount a device to file system
 
 Example:        
 ###############
-mount /dev/sdb1 /mnt/myusb                      : mount "/dev/sdb1" to "/mnt/myusb"
+mount /dev/sdb1 /mnt/myusb     : mount "/dev/sdb1" to "/mnt/myusb"
 <<<<<<<<<< mount
 
 
@@ -477,7 +477,7 @@ Umount a device from file system
 
 Example:        
 ###############
-umount /dev/sdb1                                : unmount "/dev/sdb1"
+umount /dev/sdb1               : unmount "/dev/sdb1"
 <<<<<<<<<< umount
 
 
@@ -489,9 +489,9 @@ Outpu last part of file
 
 Example:        
 ###############
-tail                                            : show 10 lines from end of file
-tail -n                                         : show 3 lines from end of file
-tail -f /var/log/syslog                         : show realtime appened data of file
+tail                           : show 10 lines from end of file
+tail -n                        : show 3 lines from end of file
+tail -f /var/log/syslog        : show realtime appened data of file
 <<<<<<<<<< tail
 
 
@@ -505,7 +505,7 @@ Change owner
 Example:
 ###############
 chown root:root jdk-11.0.6.tar.gz       : change the owner and group of "jdk-11.0.6.tar.gz" as root
-chown -R root:root /var/html            : change the owner and group of dir "/var/html" as root
+chown -R root:root /var/html/           : change the owner and group of dir "/var/html" as root
 <<<<<<<<<< chown
 
 
@@ -535,26 +535,32 @@ Example:
 /etc/passwd                        : user account info
 /etc/gshadow                       : secure group account info
 
-~/.bashrc                          : bash script sourced when login
-~/.bash_profile                    : sourced by bash
-~/.profile                         : sourced by sh or bash
 /etc/profile                       : system level ".profile"
 /etc/bash.bashrc                   : system level ".bashrc"
-
-~/.zprofile                        : mirror of "~/.profile"
-~/.zshrc                           : mirror of "~/.bashrc"
 /etc/zprofile                      : mirror of "/etc/profile"
 /etc/zshrc                         : mirror of "/etc/bash.bashrc"
 
+/etc/hosts                         : host name and its ip mapping
+/etc/hostname                      : host name of this device
+
+/etc/cron.hourly/                  : cronjob hourly dir
+/etc/cron.daily/                   : cronjob daily dir
+/etc/cron.monthly/                 : cronjob monthly dir
+/etc/cron.weekly/                  : cronjob weekly dir
+
+~/.bashrc                          : bash script sourced when login
+~/.bash_profile                    : sourced by bash
+~/.profile                         : sourced by sh or bash
+~/.zprofile                        : mirror of "~/.profile"
+~/.zshrc                           : mirror of "~/.bashrc"
+
 ~/.gitconfig                       : git config file
 
-~/.ssh                             : ssh config dir
+~/.ssh/                            : ssh config dir
 ~/.ssh/authorized_keys             : remote device public key, authorize password less login to this device
 ~/.ssh/known_hosts                 : known remote hosts
 ~/.ssh/id_rsa                      : ssh private key of this device
 ~/.ssh/id_rsa.pub                  : ssh public key of this device
-      
-
-
+    
 <<<<<<<<<< configuration files
 
