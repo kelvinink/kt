@@ -71,14 +71,14 @@ File patter searcher
 Example:
 ###############
 Searching pattern in file /etc/passwd:
-grep usr /etc/passwd            : search lines that contain substring "usr"
-grep -i usr /etc/passwd         : search lines that contain substring "usr", and ignore case
-grep -v usr /etc/passwd         : search lines that do not contain substring "usr"
-grep -c usr /etc/passwd         : print number of lines that contain substring "usr"
-grep -C 3 usr /etc/passwd       : print match lines and it's leading and trailing 3 lines
+grep usr /etc/passwd                            : search lines that contain substring "usr"
+grep -i usr /etc/passwd                         : search lines that contain substring "usr", and ignore case
+grep -v usr /etc/passwd                         : search lines that do not contain substring "usr"
+grep -c usr /etc/passwd                         : print number of lines that contain substring "usr"
+grep -C 3 usr /etc/passwd                       : print match lines and it's leading and trailing 3 lines
 
-Searching pattern in directory:
-grep -r usr /etc                : search recursively in directory "/etc"
+Searching pattern in directory:             
+grep -r usr /etc                                : search recursively in directory "/etc"
 <<<<<<<<<< grep
 
 
@@ -90,11 +90,11 @@ Stream editor
 
 Example:        
 ###############
-sed "s/usr/User/g" /etc/passwd             : substitute "usr" with "User"
-sed "/usr/d" /etc/passwd                   : delete lines contain substring "usr"
-sed "/usr/q" /etc/passwd                   : find first line contains substring "usr" and quit
-sed "/^$/d"  /etc/passwd                   : delete blank lines
-sed -i.bak "s/usr/User/g" /tmp/somefile    : modifiy inplace and save original file with ".bak" extension
+sed "s/usr/User/g" /etc/passwd                  : substitute "usr" with "User"
+sed "/usr/d" /etc/passwd                        : delete lines contain substring "usr"
+sed "/usr/q" /etc/passwd                        : find first line contains substring "usr" and quit
+sed "/^$/d"  /etc/passwd                        : delete blank lines
+sed -i.bak "s/usr/User/g" /tmp/somefile         : modifiy inplace and save original file with ".bak" extension
 Extra:
 ###############
 Posix regex meta characters:
@@ -117,22 +117,22 @@ VScode hotkeys
 
 Example:        
 ###############
-shift + ctrl + cmd + ->         : code block selection
-option + up                     : move selected block up
-option + down                   : move selected block down
-option + shift + up             : copy up
-option + shift + down           : copy down
-cmd + d                         : select words
-shift + option + cmd + down     : select multiple lines
-option + cmd                    : close code block
-cmd + o                         : close all code blocks
-cmd + ->                        : to end of line
-cmd + <-                        : to start of line
-cmd + shift + ->                : select to end of line
-cmd + shift + <-                : select to start of line
-cmd + [                         : unindent
-cmd + ]                         : indent
-ctrl + `                        : open terminal
+shift + ctrl + cmd + ->                         : code block selection
+option + up                                     : move selected block up
+option + down                                   : move selected block down
+option + shift + up                             : copy up
+option + shift + down                           : copy down
+cmd + d                                         : select words
+shift + option + cmd + down                     : select multiple lines
+option + cmd                                    : close code block
+cmd + o                                         : close all code blocks
+cmd + ->                                        : to end of line
+cmd + <-                                        : to start of line
+cmd + shift + ->                                : select to end of line
+cmd + shift + <-                                : select to start of line
+cmd + [                                         : unindent
+cmd + ]                                         : indent
+ctrl + `                                        : open terminal
 <<<<<<<<<< hotkey vscode
 
 
@@ -339,8 +339,8 @@ An archive tool
 
 Example:        
 ###############
-tar zcvf -o mytar.tar.gz .                     : create an archive and gzip it for current dir
-tar zxvf mytar.tar.gz                          : unzip and extract archive "mytar.tar.gz"
+tar zcvf -o mytar.tar.gz .                      : create an archive and gzip it for current dir
+tar zxvf mytar.tar.gz                           : unzip and extract archive "mytar.tar.gz"
 <<<<<<<<<< tar
 
 
@@ -384,9 +384,9 @@ Concatenate and print files
 
 Example:        
 ###############
-cat file1 file2 > file3      : concatenate "file1" , "file2" and store in file3
-cat -n myfile                : cat with line number
-cat -s myfile                : cat without empty lines(squeeze empty lines)
+cat file1 file2 > file3                         : concatenate "file1" , "file2" and store in file3
+cat -n myfile                                   : cat with line number
+cat -s myfile                                   : cat without empty lines(squeeze empty lines)
 <<<<<<<<<< cat
 
 
@@ -398,7 +398,7 @@ Display file system disk unstage
 
 Example:        
 ###############
-df -h                       : display disk usage in human readable way
+df -h                                           : display disk usage in human readable way
 <<<<<<<<<< df
 
 
@@ -409,12 +409,102 @@ Display file space usage
 
 Example:        
 ###############
-du                          : display disk usage for current working dir
-du -h                       : display disk usage in human readable way
-du -h /tmp                  : display disk usage for dir "/tmp" and its subdir
-du -h -d 1 /tmp             : display disk usage for dir "/tmp" and its subdir whose depth is 1
-du -sh /tmp                 : display disk usage for dir "/tmp" only (summarize)
+du                                              : display disk usage for current working dir
+du -h                                           : display disk usage in human readable way
+du -h /tmp                                      : display disk usage for dir "/tmp" and its subdir
+du -h -d 1 /tmp                                 : display disk usage for dir "/tmp" and its subdir whose depth is 1
+du -sh /tmp                                     : display disk usage for dir "/tmp" only (summarize)
 <<<<<<<<<< du
+
+
+
+
+>>>>>>>>>> mount
+Description:        
+###############
+Mount a device to file system
+
+Example:        
+###############
+mount /dev/sdb1 /mnt/myusb                      : mount "/dev/sdb1" to "/mnt/myusb"
+<<<<<<<<<< mount
+
+
+
+>>>>>>>>>> umount
+Description:        
+###############
+Umount a device from file system
+
+Example:        
+###############
+umount /dev/sdb1                                : unmount "/dev/sdb1"
+<<<<<<<<<< umount
+
+
+
+>>>>>>>>>> tail
+Description:        
+###############
+Outpu last part of file
+
+Example:        
+###############
+tail                                            : show 10 lines from end of file
+tail -n                                         : show 3 lines from end of file
+tail -f /var/log/syslog                         : show realtime appened data of file
+<<<<<<<<<< tail
+
+
+
+
+>>>>>>>>>> chown
+Description:
+Change owner
+###############
+
+Example:
+###############
+chown root:root jdk-11.0.6.tar.gz               : change the owner and group of "jdk-11.0.6.tar.gz" as root
+chown -R root:root /var/html/                   : change the owner and group of dir "/var/html" as root
+<<<<<<<<<< chown
+
+
+
+
+>>>>>>>>>> usermod
+Description:
+###############
+Modify user account
+
+Example:
+###############
+usermod -aG docker kelvin                       : Add user "kelvin" to group "docker"
+<<<<<<<<<< usermod
+
+
+
+>>>>>>>>>> swap
+Description:        
+###############
+Swap utilities: dd, mkswap, swapon, /etc/fstab
+
+Example:        
+###############
+dd if=/dev/zero of=/media/swap.img bs=1024 count=4M                   : create a file whose size is 4G
+mkswap /media/swap.img                                                : make the file a swap
+swapon /media/swap.img                                                : temporary turn on the swap
+
+echo "/media/swap.img swap swap sw 0 0" >> /etc/fstab                 : turn on swap on boot time
+
+Extra:
+###############
+Format of /etc/fstab file:
+
+Device          Mount Point    File System Type   Options   Backup Option   File System Check Order
+------          -----------    ----------------   -------   -------------   -----------------------
+/media/swap.img swap           swap               sw        0               0
+<<<<<<<<<< swap
 
 
 
@@ -431,95 +521,6 @@ scp . root@remotehost:/path/to/file .                                 : copy fil
 scp -r root@remotehost:/path/to/dir .                                 : copy dir from remotehost to current directory
 scp -r root@remotehost:/path/to/dir .                                 : copy dir from localhost to remotehost
 <<<<<<<<<< scp
-
-
-
->>>>>>>>>> swap
-Description:        
-###############
-Swap utilities: dd, mkswap, swapon, /etc/fstab
-
-Example:        
-###############
-dd if=/dev/zero of=/media/swap.img bs=1024 count=4M    : create a file whose size is 4G
-mkswap /media/swap.img                                 : make the file a swap
-swapon /media/swap.img                                 : temporary turn on the swap
-
-echo "/media/swap.img swap swap sw 0 0" >> /etc/fstab  : turn on swap on boot time
-
-Extra:
-###############
-Format of /etc/fstab file:
-
-Device          Mount Point    File System Type   Options   Backup Option   File System Check Order
-------          -----------    ----------------   -------   -------------   -----------------------
-/media/swap.img swap           swap               sw        0               0
-<<<<<<<<<< swap
-
-
-
->>>>>>>>>> mount
-Description:        
-###############
-Mount a device to file system
-
-Example:        
-###############
-mount /dev/sdb1 /mnt/myusb     : mount "/dev/sdb1" to "/mnt/myusb"
-<<<<<<<<<< mount
-
-
-
->>>>>>>>>> umount
-Description:        
-###############
-Umount a device from file system
-
-Example:        
-###############
-umount /dev/sdb1               : unmount "/dev/sdb1"
-<<<<<<<<<< umount
-
-
-
->>>>>>>>>> tail
-Description:        
-###############
-Outpu last part of file
-
-Example:        
-###############
-tail                           : show 10 lines from end of file
-tail -n                        : show 3 lines from end of file
-tail -f /var/log/syslog        : show realtime appened data of file
-<<<<<<<<<< tail
-
-
-
-
->>>>>>>>>> chown
-Description:
-Change owner
-###############
-
-Example:
-###############
-chown root:root jdk-11.0.6.tar.gz       : change the owner and group of "jdk-11.0.6.tar.gz" as root
-chown -R root:root /var/html/           : change the owner and group of dir "/var/html" as root
-<<<<<<<<<< chown
-
-
-
-
->>>>>>>>>> usermod
-Description:
-###############
-Modify user account
-
-Example:
-###############
-usermod -aG docker kelvin          : Add user "kelvin" to group "docker"
-<<<<<<<<<< usermod
 
 
 
