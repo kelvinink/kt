@@ -9,7 +9,7 @@ alias    : print all alias that you can use
 <<<<<<<<<< alias
 
 
->>>>>>>>>>> dlv
+>>>>>>>>>> dlv
 Description:
 ###############
 Go debug tool
@@ -17,7 +17,7 @@ Go debug tool
 Example:
 ###############
 dlv debug --headless --listen=:2345 --log --api-version=2    : start remote debug server
-<<<<<<<<<<< dlv
+<<<<<<<<<< dlv
 
 
 
@@ -164,28 +164,6 @@ Up,Down,Left,Right
 
 
 
->>>>>>>>>> mysql
-Description:        
-###############
-Mysql client
-
-Example:        
-###############
-mysql -h localhost -u root -p                    : login mysql
-
-show databases;                                  : show all databases
-use mydb;                                        : using "mydb"
-show tables;                                     : show all tables in current databases
-show index from mydb.mytable                     : show index "of mydb.mytable"
-show variables like "%slow%"                     : show slow log related variables
-
-set global slow_query_log="ON"                   : turn on slow log
-set global slow_query_log_file="path/to/file"    : set slow log file
-set global log_query_time=10                     : log to slow log if query time exceed 10ms
-<<<<<<<<<< mysql
-
-
-
 >>>>>>>>>> export
 Description:        
 ###############
@@ -253,14 +231,6 @@ docker image import ~/ubuntu.tar                : import image from "ubuntu.tar"
 
 
 
-**Add a New User to MySQL with Full Permission**
-```shell
-CREATE USER kelvin@localhost IDENTIFIED BY '7ujmnhy6';
-GRANT ALL PRIVILEGES on *.* TO kelvin@localhost with GRANT OPTION;
-FLUSH PRIVILEGES; 
-```
-
-
 >>>>>>>>>> mysql
 Description:        
 ###############
@@ -272,6 +242,16 @@ mysql -h host -u user -p                                                    : lo
 mysql -h host -u user -p mydb                                               : login mysql and switch to "mydb"
 mysql -h host -u user -p mydb < mydumpedfile.sql                            : import mysql dumped file
 mysql -h host -u user -p -e "SELECT * FROM mytable;" mydb > output.txt      : export query result to "output.txt"
+
+show databases;                                                             : show all databases
+use mydb;                                                                   : using "mydb"
+show tables;                                                                : show all tables in current databases
+show index from mydb.mytable                                                : show index "of mydb.mytable"
+show variables like "%slow%"                                                : show slow log related variables
+                            
+set global slow_query_log="ON"                                              : turn on slow log
+set global slow_query_log_file="path/to/file"                               : set slow log file
+set global log_query_time=10                                                : log to slow log if query time exceed 10ms
 <<<<<<<<<< mysql
 
 
