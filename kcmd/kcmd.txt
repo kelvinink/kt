@@ -137,6 +137,33 @@ ctrl + `                                        : open terminal
 
 
 
+>>>>>>>>>> tmux
+Description:
+###############
+A terminal multiplexer
+
+Example:
+###############
+tmux new -s mysession -n window0                 : create session "mysession", first window named window0
+tmux attach -t mysession                         : attaches to "mysession"
+
+Key Stroke: start with prefix: "ctrl + b"
+d                                                : Detach
+:                                                : Command mode
+c                                                : New window
+0..9                                             : Window index
+,                                                : Rename window
+&                                                : Close window
+%                                                : Split vertically
+"                                                : Split horizontally
+x                                                : Close pane
+space                                            : Pane layout
+q                                                : Pane number
+Up,Down,Left,Right
+<<<<<<<<<< tmux
+
+
+
 >>>>>>>>>> mysql
 Description:        
 ###############
@@ -226,6 +253,61 @@ docker image import ~/ubuntu.tar                : import image from "ubuntu.tar"
 
 
 
+**Add a New User to MySQL with Full Permission**
+```shell
+CREATE USER kelvin@localhost IDENTIFIED BY '7ujmnhy6';
+GRANT ALL PRIVILEGES on *.* TO kelvin@localhost with GRANT OPTION;
+FLUSH PRIVILEGES; 
+```
+
+
+>>>>>>>>>> mysql
+Description:        
+###############
+MySQL client
+
+Example:        
+###############
+mysql -h host -u user -p                                                    : login mysql
+mysql -h host -u user -p mydb                                               : login mysql and switch to "mydb"
+mysql -h host -u user -p mydb < mydumpedfile.sql                            : import mysql dumped file
+mysql -h host -u user -p -e "SELECT * FROM mytable;" mydb > output.txt      : export query result to "output.txt"
+<<<<<<<<<< mysql
+
+
+
+>>>>>>>>>> mysqldump
+Description:        
+###############
+MySQL backup program
+
+Example:        
+###############
+mysqldump -u user -p --all-databases > mydumpedfile.sql                    : backup all databases
+mysqldump -u user -p --databases mydb1 mydb2 > mydumpedfile.sql            : backup "mydb1" and "mydb2"
+mysqldump -u user -p mydb t1 t2 t3 > mydumpedfile.sql                      : backup 3 tables of "mydb"
+<<<<<<<<<< mysqldump
+
+
+
+
+>>>>>>>>>> sql
+Description:        
+###############
+Most frequently used SQL examples
+
+Example:        
+###############
+CREATE USER kelvin@localhost IDENTIFIED BY 'mypass';                      : create new user and grant full privileges
+GRANT ALL PRIVILEGES on *.* TO kelvin@localhost with GRANT OPTION;
+FLUSH PRIVILEGES;
+
+SELECT * INTO OUTFILE 'output.txt' FROM mytable;                          : save query result to "output.txt"
+<<<<<<<<<< sql
+
+
+
+
 >>>>>>>>>> ps
 Description:        
 ###############
@@ -233,8 +315,8 @@ Show process status
 
 Example:        
 ###############
-ps                                              : disply process of current shell
-ps aux                                          : display detail info of all process
+ps                                              : disply processes of current shell
+ps aux                                          : display detail info of all processes
 ps -ef                                          : same as "ps aux"
 <<<<<<<<<< ps
 
@@ -287,7 +369,7 @@ Display process tree
 
 Example:        
 ###############
-pstree                                          : display a beautiful process tree
+pstree                                          : display a beautiful processes tree
 <<<<<<<<<< pstree
 
 
@@ -372,7 +454,7 @@ Advanced package tool
 Example:        
 ###############
 dpkg --list                                     : list all installed packages
-dpkg --install vim.fc7-8386.deb                 : install the package vim.fc7-8386.deb downloaded by yourself
+dpkg --install vim.fc7-8386.deb                 : install the package "vim.fc7-8386.deb" downloaded by yourself
 <<<<<<<<<< dpkg
 
 
@@ -481,6 +563,21 @@ Example:
 ###############
 usermod -aG docker kelvin                       : Add user "kelvin" to group "docker"
 <<<<<<<<<< usermod
+
+
+
+>>>>>>>>>> chmod
+Description:
+###############
+Change file, dir access control list
+
+Example:
+###############
+chmod 644 /etc/passwd                           : change ACL of "/etc/passwd" to "644"
+chmod -R 775 /var/www                           : change ACL of "/var/www" dir recursively to "775"
+chmod +x myprogram                              : add execute permission for current user
+chmod a+x myprogram                             : add execute permission for all users
+<<<<<<<<<< chmod
 
 
 
