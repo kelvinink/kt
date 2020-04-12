@@ -6,8 +6,10 @@ argc=$#
 function usage_help(){
     echo "Usage: kcmd [-e|-h]"
     echo "Options:"
-    echo "-e, --edit    edit kcmd file"
-    echo "-h, --help    print this help message"
+    echo "-e, --edit               edit kcmd file"
+    echo "-h, --help               print this help message"
+    echo "-l, --list               list all kcmd items"
+    echo "-s, --search <myitem>    search kcmd item"
 }
 
 while [[ $# -gt 0 ]]
