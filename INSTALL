@@ -1,0 +1,18 @@
+#!/bin/bash
+
+SCRIPTPATH="$( cd "$(dirname "$0" )" >/dev/null 2>&1 ; pwd -P )"
+
+echo "Export KTHOME=$SCRIPTPATH"
+echo "export KTHOME=$SCRIPTPATH" >> ~/.bashrc
+
+echo "Enable kcmd"
+echo "export PATH=\$PATH:$SCRIPTPATH/kcmd/bin" >> ~/.bashrc
+
+echo "Enable keg"
+echo "export PATH=\$PATH:$SCRIPTPATH/keg/bin" >> ~/.bashrc
+
+echo "Enable kdoc"
+echo "export PATH=\$PATH:$SCRIPTPATH/kdoc/bin" >> ~/.bashrc
+
+echo "Enable kgraph"
+echo "export PATH=\$PATH:$SCRIPTPATH/kgraph/bin" >> ~/.bashrc
