@@ -1,6 +1,6 @@
 # kt
 
-kt includes abunch of handy tools for software developers.
+kt includes a bunch of handy tools for software developers.
 
 * kcmd   :  quick cheatsheet for linux command
 * kgraph :  useful reference graphs for developers
