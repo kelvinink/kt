@@ -8,7 +8,6 @@ function usage_help(){
     echo "Options:"
     echo "-e, --edit               edit kalias file"
     echo "-h, --help               print this help message"
-    echo "-s, --set '<alias>'      set an alias to ~/.bashrc"
 }
 
 while [[ $# -gt 0 ]]
@@ -24,11 +23,6 @@ do
             ;;
         -h|--help)
             usage_help
-            shift # past argument
-            break
-            ;;
-        -s|--set)
-            echo $2 >> ~/.bashrc
             shift # past argument
             break
             ;;

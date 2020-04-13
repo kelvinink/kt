@@ -19,3 +19,5 @@ echo "export PATH=\$PATH:$SCRIPTPATH/kgraph/bin" >> ~/.bashrc
 
 echo "Enable kalias"
 echo "export PATH=\$PATH:$SCRIPTPATH/kalias/bin" >> ~/.bashrc
+echo "Sourcing kalias" >> ~/.bashrc
+echo "source $SCRIPTPATH/kalias/kaliasrc" >> ~/.bashrc
