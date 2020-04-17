@@ -55,6 +55,8 @@ git cherry-pick 2e3c1a1                                : pick changes from 2e3c1
 git revert HEAD                                        : revert changes of HEAD
 git revert -m 1 2e3c1a1                                : 2e3c1a1 is a merge commit and -m option specify the parent number
 
+git remote -v                                          : list remote repository
+
 git config user.name kelvin                            : set user name
 git config user.email kelvinaddr@gmail.com             : set user email
 git config --global user.name kelvin                   : set global user name
@@ -220,6 +222,8 @@ docker rmi myimage                              : remove image "myimage"
 docker ps                                       : show running containers
 docker ps -a                                    : show all containers, including stopped one
 docker network create mynet                     : create new network "mynet" 
+docker network ls                               : lis all network
+docker network inspect 288khfai                 : show settings of network "288khfai"
 docker start mycontainer                        : start instance "mycontainer"
 docker stop mycontainer                         : stop instance "mycontainer"
 docker rm mycontainer                           : remove container "mycontainer"
@@ -450,6 +454,18 @@ cat file1 file2 > file3                         : concatenate "file1" , "file2" 
 cat -n myfile                                   : cat with line number
 cat -s myfile                                   : cat without empty lines(squeeze empty lines)
 <<<<<<<<<< cat
+
+
+
+>>>>>>>>>> nc
+Description:        
+###############
+Netcat
+
+Example:        
+###############
+nc -lk 9000                                     : listening on port 9000
+<<<<<<<<<< nc
 
 
 
