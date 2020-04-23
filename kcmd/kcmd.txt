@@ -20,6 +20,19 @@ dlv debug --headless --listen=:2345 --log --api-version=2    : start remote debu
 <<<<<<<<<< dlv
 
 
+>>>>>>>>>> go
+Description:
+###############
+Go command line
+
+Example:
+###############
+go test                                                : run test for all test files
+go test abc_test.go                                    : run test for file "abc_test.go"
+go clean -testcache && go test                         : clean cache and run test
+<<<<<<<<<< go
+
+
 
 >>>>>>>>>> git
 Description: 
