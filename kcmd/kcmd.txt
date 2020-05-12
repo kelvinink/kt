@@ -41,6 +41,7 @@ Git is a version control tool
 
 Example:
 ###############
+git blame myfile                                       : show who modifies each line
 git log                                                : show all commit logs
 git reflog                                             : show all recent actions, help to find lost commit hash
 
@@ -149,6 +150,39 @@ cmd + [                                         : unindent
 cmd + ]                                         : indent
 ctrl + `                                        : open terminal
 <<<<<<<<<< hotkey vscode
+
+
+
+>>>>>>>>>> hotkey goland
+Description:    
+###############
+Goland hotkeys
+
+Example:        
+###############
+double shift                                    : find everywhere
+f2                                              : navigate between code issue
+shift + cmd + f                                 : find all
+cmd + f                                         : find in this file
+cmd + r                                         : replace
+cmd + e                                         : view recent files
+cmd + /                                         : comment/uncomment
+cmd + b                                         : to declaration or usage
+cmd + n                                         : generate
+cmd + w                                         : close window
+cmd + [                                         : back : super useful for tracing code
+cmd + ]                                         : forward : super useful for tracing code
+cmd + z                                         : undo
+cmd + s                                         : save
+tab                                             : indent
+shift + tab                                     : unindent
+ctrl + opt + h                                  : show call hierarchy
+opt + f7                                        : find usages
+opt + enter                                     : show intention actions and quick fixes
+opt + t                                         : refactor this
+opt + v                                         : version control
+
+<<<<<<<<<< hotkey goland
 
 
 
@@ -508,6 +542,15 @@ du -sh /tmp                                     : display disk usage for dir "/t
 <<<<<<<<<< du
 
 
+>>>>>>>>>> df
+Description:        
+###############
+Report file system disk usage
+
+Example:        
+###############
+df -h                                           : display file system disk usage in human readable way
+<<<<<<<<<< df
 
 
 >>>>>>>>>> mount
