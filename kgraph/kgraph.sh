@@ -10,7 +10,8 @@ function usage_help(){
     echo "-h, --help                  print this help message"
     echo "-l, --list                  list all kgraph images"
     echo "-s, --search <img name>     search kgraph image by name"
-    echo "-o, --open                  open image dir"
+    echo "-d, --dir                   open image dir"
+    echo "-o, --open <img name>       open image by name"
 }
 
 while [[ $# -gt 0 ]]
@@ -40,9 +41,15 @@ do
             shift # past value
             break
             ;;
-        -o|--open)
+        -d|--dir)
             open $kgraphdir/img
             shift # past argument
+            break
+            ;;
+        -o|--open)
+            open $kgraphdir/img/$2
+            shift # past argument
+            shift # past value
             break
             ;;
         *)
@@ -56,5 +63,3 @@ done
 if [[ $argc -eq 0 ]]; then
     ls $kgraphdir/img | cat
 fi
-
-

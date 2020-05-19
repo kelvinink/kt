@@ -52,6 +52,7 @@ git stash                                              : stashing changes and ke
 git stash pop                                          : restore stashed changes back to working dir
 
 git branch                                             : show branches
+git branch -d mybranch                                 : delete a branch
 git checkout -b newbranch                              : create a new branch "newbranch"
 git checkout -- myfile                                 : checkout "myfile" from HEAD and cover the one in working directory
 git checkout .                                         : checkout all files from HEAD and cover those in working directory
@@ -415,6 +416,17 @@ Example:
 jobs                                            : display jobs of current terminal
 fg %1                                           : bring job numbered "1" back to foreground
 <<<<<<<<<< jobs
+
+
+>>>>>>>>>> nohup
+Description:        
+###############
+Run program in background without hangup
+
+Example:        
+###############
+setsid nohup ./output/bootstrap.sh &!           : display jobs of current terminal
+<<<<<<<<<< nohup
 
 
 
