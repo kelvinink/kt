@@ -1,15 +1,14 @@
 #!/bin/bash
 
-kcmddir=$KTHOME/kcmd
+kegdir=$KTHOME/keg
 argc=$#
 
 function usage_help(){
-    echo "Usage: kcmd [-e|-h|-l|-s]"
+    echo "Usage: keg [-e|-h|-l]"
     echo "Options:"
-    echo "-e, --edit               edit kcmd file"
+    echo "-e, --edit               edit keg file"
     echo "-h, --help               print this help message"
-    echo "-l, --list               list all kcmd items"
-    echo "-s, --search <myitem>    search kcmd item"
+    echo "-l, --list               list all keg items"
 }
 
 while [[ $# -gt 0 ]]
@@ -18,8 +17,8 @@ do
 
     case $option in
         -e|--edit)
-            echo "Edit $kcmddir"
-            code $kcmddir
+            echo "Edit $kegdir"
+            code $kegdir
             shift # past argument
             break
             ;;
@@ -29,12 +28,12 @@ do
             break
             ;;
         -l|--list)
-            grep ">>>>>>>>>>.*" $kcmddir/kcmd.txt
+            tree $kegdir/eg
             shift # past argument
             break
             ;;
         -s|--search)
-            sed -n "/>>>>>>>>>> $2/,/<<<<<<<<<< $2/p" $kcmddir/kcmd.txt
+            sed -n "/>>>>>>>>>> $2/,/<<<<<<<<<< $2/p" $kegdir/keg.txt
             shift # past argument
             shift # past value
             break
@@ -48,7 +47,7 @@ done
 
 #Handle non-option arguments
 if [[ $argc -eq 0 ]]; then
-    cat $kcmddir/kcmd.txt
+    cat $kegdir/keg.txt
 fi
 
 

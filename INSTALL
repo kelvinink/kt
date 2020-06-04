@@ -2,6 +2,9 @@
 
 SCRIPTPATH="$( cd "$(dirname "$0" )" >/dev/null 2>&1 ; pwd -P )"
 
+echo "This program only works in MacOS"
+echo "Please make sure you have vscode installed."
+
 echo "Export KTHOME=$SCRIPTPATH"
 echo "export KTHOME=$SCRIPTPATH" >> ~/.bashrc
 
@@ -10,6 +13,7 @@ echo "export PATH=\$PATH:$SCRIPTPATH/kcmd/bin" >> ~/.bashrc
 
 echo "Enable keg"
 echo "export PATH=\$PATH:$SCRIPTPATH/keg/bin" >> ~/.bashrc
+brew install tree
 
 echo "Enable kdoc"
 echo "export PATH=\$PATH:$SCRIPTPATH/kdoc/bin" >> ~/.bashrc

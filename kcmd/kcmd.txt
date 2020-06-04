@@ -27,8 +27,10 @@ Go command line
 
 Example:
 ###############
+go env                                                 : list go environment variables
 go test                                                : run test for all test files
 go test abc_test.go                                    : run test for file "abc_test.go"
+go test -v abc_test.go                                 : run test for file "abc_test.go", show test details
 go clean -testcache && go test                         : clean cache and run test
 <<<<<<<<<< go
 
@@ -127,7 +129,7 @@ http://www.ing.iac.es/~docs/external/bash/abs-guide/x16155.html    : sed example
 
 
 
->>>>>>>>>> hotkey vscode
+>>>>>>>>>> vscode
 Description:    
 ###############
 VScode hotkeys
@@ -150,11 +152,11 @@ cmd + shift + <-                                : select to start of line
 cmd + [                                         : unindent
 cmd + ]                                         : indent
 ctrl + `                                        : open terminal
-<<<<<<<<<< hotkey vscode
+<<<<<<<<<< vscode
 
 
 
->>>>>>>>>> hotkey goland
+>>>>>>>>>> goland
 Description:    
 ###############
 Goland hotkeys
@@ -183,7 +185,7 @@ opt + enter                                     : show intention actions and qui
 opt + t                                         : refactor this
 opt + v                                         : version control
 
-<<<<<<<<<< hotkey goland
+<<<<<<<<<< goland
 
 
 
@@ -256,6 +258,32 @@ netstat -r                                      : show kernel ip routing table
 
 
 
+>>>>>>>>>> find
+Description:        
+###############
+Find files
+
+Example:        
+###############
+find / -name myfile                             : find files whose name contain "myfile" substring
+<<<<<<<<<< find
+
+
+
+>>>>>>>>>> crontab
+Description:        
+###############
+Cofigure cronjob plan
+Crontab tool: https://crontab.guru
+
+Example:        
+###############
+crontab -l                                      : list crontab
+crontab -e                                      : edit crontab
+<<<<<<<<<< crantab
+
+
+
 >>>>>>>>>> docker
 Description:        
 ###############
@@ -279,6 +307,7 @@ docker-compose up --scale myservice=3           : scaling 3 "myservice" instance
 docker exec -it ubuntu bash                     : connect to container "ubuntu" and run bash shell
 docker save -o ubuntu.tar  ecaf60f29fef         : save image "ecaf60f29fef" as "ubuntu.tar"
 docker image import ~/ubuntu.tar                : import image from "ubuntu.tar"
+docker cp mycontainer:/path/to/file ./          : copy file from container to host machine
 <<<<<<<<<< docker
 
 
@@ -322,7 +351,6 @@ mysqldump -u user -p mydb t1 t2 t3 > mydumpedfile.sql                      : bac
 
 
 
-
 >>>>>>>>>> sql
 Description:        
 ###############
@@ -337,6 +365,47 @@ FLUSH PRIVILEGES;
 SELECT * INTO OUTFILE 'output.txt' FROM mytable;                          : save query result to "output.txt"
 <<<<<<<<<< sql
 
+
+
+>>>>>>>>>> passwd
+Description:        
+###############
+Change password
+
+Example:        
+###############
+passwd                                          : change password for current user
+passwd otheruser                                : change password for "otheruser"
+<<<<<<<<<< passwd
+
+
+
+>>>>>>>>>> journalctl
+Description:        
+###############
+Query systemd journal
+
+Example:        
+###############
+journalctl                                      : show all journal
+journalctl -e                                   : show the end of journal
+journalctl -eu docker                           : show the end of "docker" related journal
+<<<<<<<<<< journalctl
+
+
+
+>>>>>>>>>> systemctl
+Description:        
+###############
+System service control
+
+Example:        
+###############
+systemctl start vsftpd                          : start vsftpd
+systemctl stop vsftpd                           : stop vsftpd
+systemctl restart vsftpd                        : restart vsftpd
+systemctl status 12345                          : show process(pid=12345) status
+<<<<<<<<<< systemctl
 
 
 
@@ -354,16 +423,16 @@ ps -ef                                          : same as "ps aux"
 
 
 
->>>>>>>>>> passwd
+>>>>>>>>>> pkill
 Description:        
 ###############
-Change password
+Kill process by name
 
 Example:        
 ###############
-passwd                                          : change password for current user
-passwd otheruser                                : change password for "otheruser"
-<<<<<<<<<< ps
+pkill top                                       : kill process "top" by name, partial match
+pkill -f top                                    : kill process "top" by name, full match
+<<<<<<<<<< pkill
 
 
 
