@@ -78,6 +78,11 @@ git config user.name kelvin                            : set user name
 git config user.email kelvinaddr@gmail.com             : set user email
 git config --global user.name kelvin                   : set global user name
 git config --global user.email kelvinaddr@gmail.com    : set global user email
+
+git diff                                               : diff between cwd and index
+git diff 7988362                                       : diff between commit "7988362" and cwd
+git diff --cached 7988362                              : diff between commit "7988362" and index
+git diff 7988362 3892323                               : diff between two commits
 <<<<<<<<<< git
 
 
