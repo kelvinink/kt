@@ -4,7 +4,7 @@
 for retry := 0; retry < 3; retry++ {
     err := trydo()
     if err != nil{
-        logs.Info()
+        logs.Info("Try failed")
         time.Sleep(time.Second*3)
     } else {
         break
@@ -18,7 +18,7 @@ for retry := 0; retry < 3; retry++ {
         break
     }
 
-    logs.Info()
+    logs.Info("Try failed")
     time.Sleep(time.Second*3)
 }
 ```
