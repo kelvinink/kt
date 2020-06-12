@@ -1,34 +1,34 @@
-# Create
+# Eg: Create
 ```go
 ----
 myset := make(map[string]bool)
 ```
 
-# Insert
+# Eg: Insert
 ```go
 ----
 myset["foo"] = true
 ```
 
-# Delete
+# Eg: Delete
 ```go
 ----
 delete(myset, "foo")
 ```
 
-# Membership
+# Eg: Membership
 ```go
 ----
 exists := myset["foo"]
 ```
 
-# Size
+# Eg: Size
 ```go
 ----
 size := len(myset)
 ```
 
-# Iterate
+# Eg: Iterate
 ```go
 ----
 for k := range {

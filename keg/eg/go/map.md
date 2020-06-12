@@ -1,4 +1,4 @@
-# Create
+# Eg: Create
 ```go
 ----
 mymap := make(map[string]int)
@@ -14,31 +14,31 @@ mymap := map[string]int{
 var mymap map[string]int
 ```
 
-# Insert
+# Eg: Insert
 ```go
 ----
 mymap["age"] = 25
 ```
 
-# Delete
+# Eg: Delete
 ```go
 ----
 delete(mymap, "age")
 ```
 
-# Membership
+# Eg: Membership
 ```go
 ----
 exists := mymap["age"]
 ```
 
-# Size
+# Eg: Size
 ```go
 ----
 size := len(mymap)
 ```
 
-# Iterate
+# Eg: Iterate
 ```go
 ----
 for k, v := range mymap{

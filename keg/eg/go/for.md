@@ -1,4 +1,4 @@
-# Retry
+# Eg: Retry
 ```go
 ----
 for retry := 0; retry < 3; retry++ {

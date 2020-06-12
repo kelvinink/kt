@@ -1,4 +1,4 @@
-# Marshal
+# Eg: Marshal
 ```go
 ----
 bytes, err := json.Marshal(object)
@@ -7,7 +7,7 @@ if err != nil {
 }
 ```
 
-# Unmarshal
+# Eg: Unmarshal
 ```go
 ----
 err := json.Unmarshal(bytes, &model)
