@@ -9,6 +9,17 @@ alias    : print all alias that you can use
 <<<<<<<<<< alias
 
 
+>>>>>>>>>> fuser
+Description:
+###############
+List process id with specific files open 
+
+Example:
+###############
+fuser -k -n tcp 80                                           : kill the process with tcp 80 opened
+<<<<<<<<<< fuser
+
+
 >>>>>>>>>> dlv
 Description:
 ###############
@@ -45,6 +56,7 @@ Example:
 ###############
 git blame myfile                                       : show who modifies each line
 git log                                                : show all commit logs
+git log -p --follow myfile                             : show the changes in each commit for the file 'myfile' 
 git reflog                                             : show all recent actions, help to find lost commit hash
 
 git clean -f                                           : force remove untracked files
@@ -309,6 +321,7 @@ docker network inspect 288khfai                 : show settings of network "288k
 docker start mycontainer                        : start instance "mycontainer"
 docker stop mycontainer                         : stop instance "mycontainer"
 docker rm mycontainer                           : remove container "mycontainer"
+docker rm $(docker ps -aq)                      : remove all containers
 docker-compose up --scale myservice=3           : scaling 3 "myservice" instances
 docker exec -it ubuntu bash                     : connect to container "ubuntu" and run bash shell
 docker save -o ubuntu.tar  ecaf60f29fef         : save image "ecaf60f29fef" as "ubuntu.tar"
@@ -765,10 +778,10 @@ Securely fransfer files
 Example:        
 ###############
 scp root@remotehost:/path/to/file .                                   : copy file from remotehost to current directory
-scp -i paht/to/remote/private/key root@remotehost:/path/to/file .     : copy file from remotehost to current directory, 
-scp . root@remotehost:/path/to/file .                                 : copy file from localhost to remotehost
+scp -i paht/to/remote/private/key root@remotehost:/path/to/file .     : copy file from remotehost to current directory
 scp -r root@remotehost:/path/to/dir .                                 : copy dir from remotehost to current directory
-scp -r root@remotehost:/path/to/dir .                                 : copy dir from localhost to remotehost
+scp ./* root@remotehost:/path/to/file                                 : copy file from localhost to remotehost
+scp -r ./* root@remotehost:/path/to/dir                               : copy dir from localhost to remotehost
 <<<<<<<<<< scp
 
 
