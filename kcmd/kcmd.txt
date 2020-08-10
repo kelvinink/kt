@@ -261,21 +261,6 @@ ssh -i path/to/private_key root@localhost       : login "localhost" as user "roo
 
 
 
->>>>>>>>>> netstat
-Description:        
-###############
-Show network status
-
-Example:        
-###############
-netstat -nlp                                    : show only listening socket, include its pid, numeric address
-netstat -ie                                     : show interface trasactions
-netstat -s                                      : show network status by protocol
-netstat -r                                      : show kernel ip routing table
-<<<<<<<<<< ssh
-
-
-
 >>>>>>>>>> find
 Description:        
 ###############
@@ -604,6 +589,46 @@ cat -s myfile                                   : cat without empty lines(squeez
 
 
 
+>>>>>>>>>> nslookup
+Description:        
+###############
+Translate domain name to ip address
+
+Example:        
+###############
+nslookup                                        : translate domain name to ip address
+<<<<<<<<<< nslookup
+
+
+
+>>>>>>>>>> netstat
+Description:        
+###############
+Show network status
+
+Example:        
+###############
+netstat -nlp                                    : show only listening socket, include its pid, numeric address
+netstat -ie                                     : show interface trasactions
+netstat -s                                      : show network status by protocol
+netstat -rn                                     : show ip routing table, gateway
+<<<<<<<<<< netstat
+
+
+
+>>>>>>>>>> route
+Description:        
+###############
+Show routing status
+
+Example:        
+###############
+route                                           : show ip routing table, gateway
+route -n                                        : show ip routing table, gateway, in number
+<<<<<<<<<< route
+
+
+
 >>>>>>>>>> nc
 Description:        
 ###############
@@ -612,7 +637,35 @@ Netcat
 Example:        
 ###############
 nc -lk 9000                                     : listening on port 9000
+nc -zv 8.8.8.8 80                               : scan 8.8.8.8:80 to check whether it's opened
 <<<<<<<<<< nc
+
+
+
+>>>>>>>>>> mtr
+Description:        
+###############
+Mtr is a network diagnostic tool like traceroute
+
+Example:        
+###############
+mtr google.com                                  : diagnose the route to google.com
+mtr -n 8.8.8.8                                  : force using number ip, no dns
+<<<<<<<<<< mtr
+
+
+
+>>>>>>>>>> ifconfig
+Description:        
+###############
+Network interface configuration tool
+
+Example:        
+###############
+ifconfig                                        : display network interface configurations
+ifconfig eth0 up                                : bring interface eth0 up
+ifconfig eth0 192.168.1.100/24 gw 192.168.1.1   : manually set ip address and gateway
+<<<<<<<<<< ifconfig
 
 
 
@@ -804,6 +857,8 @@ Example:
 
 /etc/hosts                         : host name and its ip mapping
 /etc/hostname                      : host name of this device
+/etc/resolve.conf                  : set dns server
+/etc/network/interfaces            : configure network interfaces settings(autostart, ip, gateway)
 
 /etc/cron.hourly/                  : cronjob hourly dir
 /etc/cron.daily/                   : cronjob daily dir
