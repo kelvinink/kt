@@ -96,6 +96,8 @@ git diff 7988362                                       : diff between commit "79
 git diff --cached                                      : diff between HEAD and cwd
 git diff --cached 7988362                              : diff between commit "7988362" and index
 git diff 7988362 3892323                               : diff between two commits
+
+Git messages type                                      : feat, fix, docs, style, refactor, perf, test, chore, revert, merge, sync
 <<<<<<<<<< git
 
 
@@ -195,6 +197,7 @@ cmd + [                                         : back : super useful for tracin
 cmd + ]                                         : forward : super useful for tracing code
 cmd + z                                         : undo
 cmd + s                                         : save
+cmd + ~                                         : switch project window
 tab                                             : indent
 shift + tab                                     : unindent
 ctrl + opt + h                                  : show call hierarchy
@@ -337,6 +340,11 @@ show variables like "%slow%"                                                : sh
 set global slow_query_log="ON"                                              : turn on slow log
 set global slow_query_log_file="path/to/file"                               : set slow log file
 set global log_query_time=10                                                : log to slow log if query time exceed 10ms
+
+from_unixtime()                                                             : convert unixtime to timestamp
+cast()                                                                      : convert string to datetype
+extract()                                                                   : extract a part from date type
+date_format()                                                               : formatting date type
 <<<<<<<<<< mysql
 
 
@@ -530,6 +538,18 @@ conda create -n myvenv python=3.6               : create a new virtual environme
 
 
 
+>>>>>>>>>> python
+Description:        
+###############
+Python
+
+Example:        
+###############
+pip list -v                                     : list all installed packages
+<<<<<<<<<< python
+
+
+
 >>>>>>>>>> tar
 Description:        
 ###############
@@ -540,6 +560,19 @@ Example:
 tar zcvf -o mytar.tar.gz .                      : create an archive and gzip it for current dir
 tar zxvf mytar.tar.gz                           : unzip and extract archive "mytar.tar.gz"
 <<<<<<<<<< tar
+
+
+
+>>>>>>>>>> gzip
+Description:        
+###############
+Compressing/decompressing tool for .gz format
+
+Example:        
+###############
+gzip myfile                                     : compress "myfile" as "myfile.gz"
+gzip myfile.gz                                  : decompress "myfile.gz" as "myfile"
+<<<<<<<<<< gzip
 
 
 
@@ -589,6 +622,17 @@ cat -s myfile                                   : cat without empty lines(squeez
 
 
 
+>>>>>>>>>> awk
+Description:        
+###############
+Patern directed file processing
+
+Example:        
+###############
+awk '{printf "%s, ",$0}' myfile                 : concatenate each line of "myfile" as one line sperated by white space
+<<<<<<<<<< awk
+
+
 >>>>>>>>>> nslookup
 Description:        
 ###############
@@ -636,7 +680,8 @@ Netcat
 
 Example:        
 ###############
-nc -lk 9000                                     : listening on port 9000
+nc -v localhost 5000                            : connect to localhost:5000 (as a client)
+nc -lk 9000                                     : listening on port 9000 (as a server)
 nc -zv 8.8.8.8 80                               : scan 8.8.8.8:80 to check whether it's opened
 <<<<<<<<<< nc
 
@@ -692,6 +737,7 @@ du -h                                           : display disk usage in human re
 du -h /tmp                                      : display disk usage for dir "/tmp" and its subdir
 du -h -d 1 /tmp                                 : display disk usage for dir "/tmp" and its subdir whose depth is 1
 du -sh /tmp                                     : display disk usage for dir "/tmp" only (summarize)
+du -sh *                                        : display disk usage for all contents of current directory
 <<<<<<<<<< du
 
 
@@ -786,6 +832,19 @@ chmod a+x myprogram                             : add execute permission for all
 
 
 
+>>>>>>>>>> ln
+Description:
+###############
+Create a link
+
+Example:
+###############
+ln origin_file link_file                        : create a link file that points to original file
+ln -s origin_file link_file                     : create a symbolic link file that points to original file
+<<<<<<<<<< ln
+
+
+
 >>>>>>>>>> g++
 Description:        
 ###############
@@ -796,6 +855,19 @@ Example:
 g++ -std=c++11 sorting.cpp                      : compile "sorting.cpp" with c++11 standard
 g++ -o myprogram file1.cpp file2.cpp            : compile "file1.cpp" and "file2.cpp" together and output a program name "myprogram"
 <<<<<<<<<< g++
+
+
+
+>>>>>>>>>> ldd
+Description:        
+###############
+Print shared dependencies (linux)
+The equivalent on MacOSX is: otool -L
+
+Example:        
+###############
+ldd my_executable                               : print the shared dependencies of "my_executable"
+<<<<<<<<<< ldd
 
 
 
@@ -880,5 +952,8 @@ Example:
 ~/.ssh/known_hosts                 : known remote hosts
 ~/.ssh/id_rsa                      : ssh private key of this device
 ~/.ssh/id_rsa.pub                  : ssh public key of this device
-<<<<<<<<<< configuration files
 
+/proc/cpuinfo                      : cpu info
+/proc/meminfo                      : running memory info
+/proc/sys/net/ipv4/*               : network stats(tcp/ip/icmp..)
+<<<<<<<<<< configuration files
