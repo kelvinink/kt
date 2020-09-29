@@ -41,7 +41,7 @@ if err != nil {
 }
 Url.Scheme = "https"
 Url.Host = "google.com"
-q := u.Query()
+q := Url.Query()
 q.Set("q", "golang")
 Url.RawQuery = q.Encode()
 fmt.Println(Url)
