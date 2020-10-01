@@ -19,11 +19,18 @@ func measureDuration() {
 	fmt.Println(duration.Nanoseconds())
 }
 
-func try() {
-	today := time.Now()
+type Person struct {
+	name string
+	age int
+}
 
-	fmt.Println(today.Local())
-	fmt.Println(time.Second)
+func (p Person) sayHello ()  {
+	fmt.Println("hi")
+}
+
+func try() {
+	var man *Person
+	man.sayHello()
 }
 
 func main() {
