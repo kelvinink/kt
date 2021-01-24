@@ -85,6 +85,7 @@ git revert HEAD                                        : revert changes of HEAD
 git revert -m 1 2e3c1a1                                : 2e3c1a1 is a merge commit and -m option specify the parent number
 
 git remote -v                                          : list remote repository
+git remote show origin                                 : show more detial info of remote repository
 
 git config user.name kelvin                            : set user name
 git config user.email kelvinaddr@gmail.com             : set user email
@@ -102,7 +103,7 @@ Git messages type                                      : feat, fix, docs, style,
 
 
 
->>>>>>>>>> grep
+>>>>>>>>>> egrep
 Description:
 ###############
 File patter searcher
@@ -110,15 +111,23 @@ File patter searcher
 Example:
 ###############
 Searching pattern in file /etc/passwd:
-grep usr /etc/passwd                            : search lines that contain substring "usr"
-grep -i usr /etc/passwd                         : search lines that contain substring "usr", and ignore case
-grep -v usr /etc/passwd                         : search lines that do not contain substring "usr"
-grep -c usr /etc/passwd                         : print number of lines that contain substring "usr"
-grep -C 3 usr /etc/passwd                       : print match lines and it's leading and trailing 3 lines
+egrep usr /etc/passwd                            : search lines that contain substring "usr"
+egrep -i usr /etc/passwd                         : search lines that contain substring "usr", and ignore case
+egrep -v usr /etc/passwd                         : search lines that do not contain substring "usr"
+egrep -w usr /etc/passwd                         : search lines that with whole word "usr"
+egrep -c usr /etc/passwd                         : print number of lines that contain substring "usr"
+egrep -C 3 usr /etc/passwd                       : print match lines and it's leading and trailing 3 lines          
+egrep -r usr /etc                                : search recursively in directory "/etc"
 
-Searching pattern in directory:             
-grep -r usr /etc                                : search recursively in directory "/etc"
-<<<<<<<<<< grep
+Regular Expression Operator:
+?       : optional
+*       : 0~many
++       : 1~many
+{n}     : exactly n
+{n,}    : n~many
+{,m}    : 0~m
+{n,m}   : n~m
+<<<<<<<<<< egrep
 
 
 
@@ -219,6 +228,8 @@ Example:
 ###############
 tmux new -s mysession -n window0                 : create session "mysession", first window named window0
 tmux attach -t mysession                         : attaches to "mysession"
+tmux ls                                          : list all sessions
+tmux set -g mouse on                             : make tmux scrollable
 
 Key Stroke: start with prefix: "ctrl + b"
 d                                                : Detach
@@ -656,7 +667,21 @@ netstat -nlp                                    : show only listening socket, in
 netstat -ie                                     : show interface trasactions
 netstat -s                                      : show network status by protocol
 netstat -rn                                     : show ip routing table, gateway
+netstat -tulpn                                  : show all open network ports
 <<<<<<<<<< netstat
+
+
+
+>>>>>>>>>> ss
+Description:        
+###############
+Socket investigation utility
+
+Example:        
+###############
+ss -t -a                                        : show all opened tcp connection
+ss -u -a                                        : show all opened udp connection
+<<<<<<<<<< ss
 
 
 
@@ -957,3 +982,16 @@ Example:
 /proc/meminfo                      : running memory info
 /proc/sys/net/ipv4/*               : network stats(tcp/ip/icmp..)
 <<<<<<<<<< configuration files
+
+
+
+>>>>>>>>>> env
+Description:        
+###############
+Environment variables
+
+Example:        
+###############
+export https_proxy=http://10.20.47.147:3128 
+export http_proxy=http://10.20.47.147:3128
+<<<<<<<<<< env
