@@ -6,18 +6,26 @@ import (
 )
 
 func constructRelativePath() {
-	Url := url.URL{}
-	Url.Path = "user/profile"
+	var (
+		u url.URL
+	)
+
+	u = url.URL{}
+	u.Path = "user/profile"
 	parms := url.Values{}
 	parms.Add("name", "kelvin")
 	parms.Add("age", "25")
 
-	Url.RawQuery = parms.Encode()
-	fmt.Printf(Url.String())
+	u.RawQuery = parms.Encode()
+	fmt.Printf(u.String())
 }
 
 func constructUrl() {
-	u := &url.URL{
+	var (
+		u url.URL
+	)
+
+	u = url.URL{
 		Scheme:   "https",
 		User:     url.UserPassword("me", "pass"),
 		Host:     "example.com",
@@ -31,17 +39,21 @@ func constructUrl() {
 }
 
 func parseAndSetUrl() {
-	Url, err := url.Parse("http://bing.com/search?q=dotnet")
+	var (
+		u *url.URL
+	)
+
+	u, err := url.Parse("http://bing.com/search?q=dotnet")
 	if err != nil {
 		fmt.Println("parse url error")
 		return
 	}
-	Url.Scheme = "https"
-	Url.Host = "google.com"
-	q := Url.Query()
+	u.Scheme = "https"
+	u.Host = "google.com"
+	q := u.Query()
 	q.Set("q", "golang")
-	Url.RawQuery = q.Encode()
-	fmt.Println(Url)
+	u.RawQuery = q.Encode()
+	fmt.Println(u)
 }
 
 func escapeUrlLink() {
@@ -50,9 +62,9 @@ func escapeUrlLink() {
 }
 
 func main() {
-	//constructRelativePath()
-	//constructUrl()
-	//parseAndSetUrl()
+	// constructRelativePath()
+	// constructUrl()
+	// parseAndSetUrl()
 	//escapeUrlLink()
 }
 
