@@ -80,5 +80,5 @@ func main() {
 	//deleteMap()
 	//mapMember()
 	//mapSize()
-	mapIterate()
+	//mapIterate()
 }

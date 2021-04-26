@@ -18,6 +18,6 @@ func sortSlice() {
 }
 
 func main() {
-	sortStrings()
-	sortSlice()
+	//sortStrings()
+	//sortSlice()
 }

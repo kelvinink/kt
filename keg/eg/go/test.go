@@ -1,16 +1,11 @@
 package main
 
-/* start
-// ***********************************
-// Template of testing
-// ***********************************
-
 import (
 	"testing"
 )
 
 var (
-	// global variables
+// global variables
 )
 
 func init() {
@@ -20,4 +15,3 @@ func init() {
 func TestMyModule(t *testing.T) {
 	// testing my module
 }
-end */

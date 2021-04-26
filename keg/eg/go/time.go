@@ -19,6 +19,22 @@ func measureDuration() {
 	fmt.Println(duration.Nanoseconds())
 }
 
+func parseInLocation() {
+	const DATE_FORMAT = "2006-01-02"
+	var (
+		SHANGHAI_TZ, _ = time.LoadLocation("Asia/Shanghai")
+	)
+
+	t, err := time.ParseInLocation(DATE_FORMAT, "2020-12-27", SHANGHAI_TZ)
+	if err != nil {
+		fmt.Println("parse in location error")
+		return
+	}
+
+	fmt.Println(t)
+}
+
 func main() {
 	//measureDuration()
+	//parseInLocation()
 }

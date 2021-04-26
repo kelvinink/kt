@@ -60,5 +60,5 @@ func main() {
 	//deleteSet()
 	//setMember()
 	//setSize()
-	setIterate()
+	//setIterate()
 }

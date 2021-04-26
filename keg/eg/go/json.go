@@ -38,8 +38,8 @@ func unmarshal() {
 
 func marshalStruct() {
 	type Person struct {
-		Name *string  `json:"name"`
-		Age *int64    `json:"age"`
+		Name *string `json:"name"`
+		Age  *int64  `json:"age"`
 	}
 
 	age := int64(25)
@@ -58,9 +58,8 @@ func marshalStruct() {
 	print(string(bytes))
 }
 
-
 func main() {
 	//marshal()
 	//unmarshal()
-	marshalStruct()
+	//marshalStruct()
 }
