@@ -11,7 +11,7 @@ func sortStrings() {
 	fmt.Println(strlist)
 }
 
-func sorSlice() {
+func sortSlice() {
 	myList := []int64{1, 3, 7, 9, 8}
 	sort.Slice(myList, func(i, j int) bool { return myList[i] < myList[j] })
 	fmt.Println(myList)
@@ -19,5 +19,5 @@ func sorSlice() {
 
 func main() {
 	sortStrings()
-	sorSlice()
+	sortSlice()
 }

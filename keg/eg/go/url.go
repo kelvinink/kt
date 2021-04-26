@@ -57,9 +57,10 @@ func main() {
 }
 
 /* start
+---------------------------------------------
 
 Doc: URL Definition
-----
+--------------------
 type URL struct {
 	Scheme     string
 	Opaque     string    // encoded opaque data
@@ -72,4 +73,10 @@ type URL struct {
 	Fragment   string    // fragment for references, without '#'
 }
 
+References
+----------
+[1] Golang Url Package Documentation: https://golang.org/pkg/net/url
+[2] Golang Url Package Examples: https://golang.org/src/net/url/example_test.go
+
+---------------------------------------------
 end */
