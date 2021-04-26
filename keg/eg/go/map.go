@@ -29,12 +29,14 @@ func createMap() {
 func insertMap() {
 	myMap := make(map[string]int)
 	myMap["age"] = 26
+
 	fmt.Println(myMap)
 }
 
 func deleteMap() {
 	myMap := make(map[string]int)
 	myMap["age"] = 26
+
 	fmt.Println(myMap)
 	delete(myMap, "age")
 	fmt.Println(myMap)

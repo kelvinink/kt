@@ -6,7 +6,9 @@ import (
 )
 
 func measureDuration() {
-	start := time.Now()
+	var (
+		start = time.Now()
+	)
 
 	// [Note] Do what ever you want here
 
@@ -20,7 +22,9 @@ func measureDuration() {
 }
 
 func parseInLocation() {
-	const DATE_FORMAT = "2006-01-02"
+	const (
+		DATE_FORMAT = "2006-01-02"
+	)
 	var (
 		SHANGHAI_TZ, _ = time.LoadLocation("Asia/Shanghai")
 	)
@@ -34,7 +38,42 @@ func parseInLocation() {
 	fmt.Println(t)
 }
 
+func yesterday() {
+	var (
+		t                = time.Now()
+		year, month, day = t.Date()
+	)
+
+	// current time of yesterday
+	yesterday := t.AddDate(0, 0, -1)
+	fmt.Println(yesterday)
+
+	// start of yesterday
+	start_yesterday := time.Date(year, month, day-1, 0, 0, 0, 0, t.Location())
+	fmt.Println(start_yesterday)
+
+	// end of yesterday
+	end_yesterday := start_yesterday.AddDate(0, 0, 1).Add(time.Nanosecond * -1)
+	fmt.Println(end_yesterday)
+}
+
+func month() {
+	var (
+		t = time.Now()
+	)
+
+	// first day of month
+	firstday := time.Date(t.Year(), t.Month(), 1, 0, 0, 0, 0, t.Location())
+	// last day of month
+	lastday := firstday.AddDate(0, 1, 0).Add(time.Nanosecond * -1)
+
+	fmt.Println(firstday)
+	fmt.Println(lastday)
+}
+
 func main() {
-	//measureDuration()
-	//parseInLocation()
+	// measureDuration()
+	// parseInLocation()
+	// yesterday()
+	// month()
 }

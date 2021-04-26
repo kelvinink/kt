@@ -53,7 +53,7 @@ func main() {
 	//constructRelativePath()
 	//constructUrl()
 	//parseAndSetUrl()
-	escapeUrlLink()
+	//escapeUrlLink()
 }
 
 /* start
