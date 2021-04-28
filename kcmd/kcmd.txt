@@ -40,10 +40,14 @@ Example:
 ###############
 go env                                                 : list go environment variables
 go test                                                : run test for all test files
-go test abc_test.go                                    : run test for file "abc_test.go"
-go test -v abc_test.go                                 : run test for file "abc_test.go", show test details
-go test -v -run TestFoo                                : run test for function "TestFoo" only
+go test -v                                             : run test for all test files, show test details
+go test abc.go abc_test.go                             : run test for file "abc.go"
+go test -run TestFoo                                   : run test for function "TestFoo" only
+go test -run "TestFoo1|TestFoo2"                       : run test for function "TestFoo1" and "TestFoo2"
+go test -run "abc.*"                                   : run test for files starting with "abc"
+
 go clean -testcache && go test                         : clean cache and run test
+go help                                                : print go help messages, very useful for go command
 <<<<<<<<<< go
 
 
@@ -344,7 +348,17 @@ mysql -h host -u user -p                                                    : lo
 mysql -h host -u user -p mydb                                               : login mysql and switch to "mydb"
 mysql -h host -u user -p mydb < mydumpedfile.sql                            : import mysql dumped file
 mysql -h host -u user -p -e "SELECT * FROM mytable;" mydb > output.txt      : export query result to "output.txt"
+<<<<<<<<<< mysql
 
+
+
+>>>>>>>>>> sql
+Description:        
+###############
+SQL 
+
+Example:        
+###############
 show databases;                                                             : show all databases
 use mydb;                                                                   : using "mydb"
 show tables;                                                                : show all tables in current databases
@@ -359,7 +373,7 @@ from_unixtime()                                                             : co
 cast()                                                                      : convert string to datetype
 extract()                                                                   : extract a part from date type
 date_format()                                                               : formatting date type
-<<<<<<<<<< mysql
+<<<<<<<<<< sql
 
 
 
