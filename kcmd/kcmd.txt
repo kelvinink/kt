@@ -45,6 +45,10 @@ go test abc.go abc_test.go                             : run test for file "abc.
 go test -run TestFoo                                   : run test for function "TestFoo" only
 go test -run "TestFoo1|TestFoo2"                       : run test for function "TestFoo1" and "TestFoo2"
 go test -run "abc.*"                                   : run test for files starting with "abc"
+go test -bench "."                                     : run benchmark for current dir
+go test -bench "." -benchmem                           : run benchmark for current dir, display memory usage
+go test -v -coverprofile cover.out abc.go abc_test.go  : run code test cover profile
+go tool cover -html=cover.out -o cover.html            : convert cover profile to html file
 
 go clean -testcache && go test                         : clean cache and run test
 go help                                                : print go help messages, very useful for go command
