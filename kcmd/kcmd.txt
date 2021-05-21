@@ -108,6 +108,8 @@ git diff --cached 7988362                              : diff between commit "79
 git diff 7988362 3892323                               : diff between two commits
 
 git fetch origin pull/3334/head:my_branch              : fetch from remote pull request, where id=3334 and brance name is my_branch
+
+git blame myfile.txt                                   : show modification history of file "myfile.txt'
  
 Git messages type                                      : feat, fix, docs, style, refactor, perf, test, chore, revert, merge, sync
 <<<<<<<<<< git

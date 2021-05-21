@@ -2,7 +2,7 @@
 
 SCRIPTPATH="$( cd "$(dirname "$0" )" >/dev/null 2>&1 ; pwd -P )"
 
-echo "This program only works in MacOS"
+echo "This program only works on MacOS"
 echo "Please make sure you have vscode installed."
 
 echo "Export KTHOME=$SCRIPTPATH"
@@ -23,4 +23,5 @@ echo "export PATH=\$PATH:$SCRIPTPATH/kgraph/bin" >> ~/.bashrc
 
 echo "Enable kalias"
 echo "export PATH=\$PATH:$SCRIPTPATH/kalias/bin" >> ~/.bashrc
+
 echo "source $SCRIPTPATH/kalias/kaliasrc" >> ~/.bashrc
