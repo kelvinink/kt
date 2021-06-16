@@ -92,6 +92,7 @@ git cherry-pick 2e3c1a1                                : pick changes from 2e3c1
 
 git revert HEAD                                        : revert changes of HEAD
 git revert -m 1 2e3c1a1                                : 2e3c1a1 is a merge commit and -m option specify the parent number
+git revert 2e3c1a1..HEAD                               : revert commit from 2e3c1a1 all the way to HEAD
 
 git remote -v                                          : list remote repository
 git remote show origin                                 : show more detial info of remote repository
