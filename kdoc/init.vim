@@ -46,7 +46,8 @@ call plug#end()
 :set smarttab
 :set softtabstop=4
 :set history=10000
-:set mouse=a
+:set mouse=v
+set clipboard=unnamedplus
 " ===========================================================================end
 
 " Theme
@@ -68,11 +69,6 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
 " ===========================================================================end
-
-" Tagbar Config
-" ===========================================================================begin
-" ===========================================================================end
-
 
 " Vim-Rainbow Config
 " ===========================================================================begin
@@ -102,7 +98,6 @@ nnoremap ) <Plug>(GitGutterNextHunk)
 nnoremap <leader>n :NERDTreeFocus<CR>
 map <C-[> <C-o>
 map <C-]> <C-i>
-map <C-B> gd
 nnoremap <C-d> :GitGutterDiffOrig<CR>
 nnoremap <C-7> :TagbarToggle<CR>
 nnoremap <C-n> :NERDTree<CR>
@@ -112,3 +107,9 @@ nmap <leader>rn <Plug>(coc-rename)
 " ===========================================================================end
 
 
+" Notes
+" ===========================================================================begin
+" Switch between tabs: Next Tab: <gt> , Prior Tab: <gT>
+" Rename variable, functions: <gd> , <rn> "rename" <Esc> <.>
+" Change project root: <leader> <n> <C>
+" ===========================================================================end
