@@ -1019,3 +1019,15 @@ Example:
 export https_proxy=http://10.20.47.147:3128 
 export http_proxy=http://10.20.47.147:3128
 <<<<<<<<<< env
+
+
+>>>>>>>>>> fzf
+Description:        
+###############
+Fuzzy finder
+
+Example:        
+###############
+# Bookmarks
+cat /Users/zhihao.liang/Library/Application\ Support/Google/Chrome/Default/Bookmarks | jq '.roots.bookmark_bar' | jq -c 'recurse(try .children[]) | {bookmark:.name, link:.url} | select(.link != null)' |  fzf
+<<<<<<<<<< fzf
